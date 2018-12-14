@@ -126,15 +126,11 @@ class FormExpositores extends Component {
                             id="contained-button-file"
                             multiple
                             type="file"
+                            style={{ width:110 , marginBottom:10}}
                             value={this.state.fileUpload}
                             onChange={this.handleChange('fileUpload')} 
                         />
-                        <label htmlFor="contained-button-file">
-                            <Button variant="contained" component="span" >
-                            Cargá una foto
-                            </Button>
-                        </label>    
-              
+                        
                         <div>
                             <Button type="submit" variant="contained" color="primary">
                             Enviar
