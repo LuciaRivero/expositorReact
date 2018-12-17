@@ -6,14 +6,14 @@ import Button from '@material-ui/core/Button';
 
 class FormExpositores extends Component {
     state = {
-        cargo:'',
-        empresa:'',
+        id:'',
         nombre:'',
         apellido:'',
-        linkedin:'',
+        cargo:'',
+        empresa:'',
         fileUpload:null,
-        twitter:''
-        
+        linkedin:'',
+        twitter:''  
      }
 
 
@@ -23,16 +23,15 @@ class FormExpositores extends Component {
         });
       };
 
-    llamar = (e) =>{
-    e.preventDefault()
-    console.log(this.state)
+    crearExpositor = (e) =>{
+        e.preventDefault()
+       console.log(this.state);
     }
     
     render() { 
-        //const { classes } = props;
         return (
             <div>
-                <form onSubmit={this.llamar}>
+                <form onSubmit={this.crearExpositor}>
                     <Grid item xs={12}>
                         
                         <TextField

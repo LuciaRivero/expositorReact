@@ -18,7 +18,6 @@ class Router extends Component {
         })
     }
 
-
     obtenerExpositores = () => {
         axios.get (`./Expositores.json`)
         .then(res => {
@@ -28,8 +27,7 @@ class Router extends Component {
         })
     } 
 
-    crearExpositor = (expositores) => {
-        
+    crearExpositor = (expositores) => {  
         axios.post(``, {expositores})
         .then(res => {
             if(res.status === 201) {
@@ -52,14 +50,30 @@ class Router extends Component {
               console.log('hubo un error: ', err);
         })
     }
-    editarPost = (expositorActualizado) =>{
 
-        const {id} = expositorActualizado;
+    editarExpositor = (expositorActualizado) =>{
+
+       // const {id} = expositorActualizado;
 
         axios.put(`${expositorActualizado.id}`, {})
         .then(res => {
             if(res.status ===  200) {
                 this.obtenerExpositores();
+            }
+        })
+    }
+
+    borrarExpositor = (id) => {
+        axios.delete(``)
+        .then(res => {
+            if(res.status === 200) {
+                const expositores = [...this.state.expositores];
+                let resultado = expositores.filter(expositor => (
+                    expositor.id !== id
+                ));
+                this.setState({
+                    expositores: resultado
+                })
             }
         })
     }
@@ -84,7 +98,7 @@ class Router extends Component {
                                 crearExpositor={this.crearExpositor} />
                         )
                     }}/>
-                    <Route exact path="/editar/:expositorId" render={(props) =>{
+                    <Route exact path="/editar/:Id" render={(props) =>{
                         let idExpositor = props.location.pathname.replace('/editar/','');
                         const expositor = this.state.expositores; 
                         let filtro;
@@ -94,7 +108,7 @@ class Router extends Component {
                         return (
                             <Editar
                                 post={filtro[0]}
-                                editarPost={this.editarPost}
+                                editarPost={this.editarExpositor}
                             />
                         )
                     }}/>

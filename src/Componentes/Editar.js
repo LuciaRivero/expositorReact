@@ -13,8 +13,9 @@ class Editar extends Component {
             //Leer refs
             nombre: this.tituloRef.current.value,
             apellido: this.apellidoRef.current.value,
-            id: this.props.expositor.id
+            id: this.props.expositores.id
         }
+    
         this.props.crearExpositores(expositores);
     }
 

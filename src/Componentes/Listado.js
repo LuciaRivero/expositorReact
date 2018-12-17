@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-//import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Expositor from './Expositor';
 
 class Listado extends Component {
+
     mostrarExpositores = () => {
         const expositores = this.props.expositores;
 
@@ -23,6 +24,10 @@ class Listado extends Component {
     render() { 
         return ( 
             <table className="table">
+            
+                <thead>
+                    <Link to={`/Crear/`} className="btn btn-warning">Agregar nuevo Expositor</Link>
+                </thead>
                 <tbody>
                     {this.mostrarExpositores()}
                 </tbody>
