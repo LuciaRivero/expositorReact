@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 import Expositor from './Expositor';
 
 class Listado extends Component {
@@ -13,8 +13,8 @@ class Listado extends Component {
                 {Object.keys(expositores).map(expositor => (
                     <Expositor 
                         key={expositor}
-                        info={this.expositores.expositores[expositor]}
                         borrarExpositor={this.props.borrarExpositor}
+                        info={this.props.expositores[expositor]}
                         />
                 ))}
             </React.Fragment>
@@ -32,3 +32,7 @@ class Listado extends Component {
 }
  
 export default Listado;
+
+/*key={expositor}
+info={this.expositores.expositores[expositor]}
+borrarExpositor={this.props.borrarExpositor} */

@@ -1,7 +1,6 @@
-{
-"expositores": [     
+[     
     {
-        "id": 1495,
+        "id": 0,
         "nombre": "Federico Procaccini",
         "institucion": null,
         "presentacion": "Ceo de Open Bank de Walmart",
@@ -11,14 +10,14 @@
         "fullImageContentType": null,
         "bioBulletsActivado": false,
         "bioBullets": null,
-        "thumbnailURL": "img/expositores/Federico_Procaccini.png",
+        "thumbnailURL": "/img/expositores/Federico_Procaccini.png",
         "imageURL": null,
         "twitterURL": "-",
         "linkedinURL": "https://www.linkedin.com/in/federicoprocaccini/",
         "apellido": "Procaccini"
     },
     {
-        "id": 1499,
+        "id": 1,
         "nombre": "Gastón Remy",
         "institucion": null,
         "presentacion": "Director de IDEA y CEO de Vista Oil & Gas Argentina",
@@ -35,7 +34,7 @@
         "apellido": "Remy"
     },
     {
-        "id": 1500,
+        "id": 2,
         "nombre": "Sergio Ronchi",
         "institucion": null,
         "presentacion": "Gerente de Compras y Comercio Exterior de INTERPACK",
@@ -52,7 +51,7 @@
         "apellido": "Ronchi"
     },
     {
-        "id": 1501,
+        "id": 3,
         "nombre": "Gabriel Sakata",
         "institucion": null,
         "presentacion": "Country Manager de Cisco",
@@ -69,7 +68,7 @@
         "apellido": "Sakata"
     },
     {
-        "id": 1502,
+        "id": 4,
         "nombre": "Juan Pablo Scasserra",
         "institucion": null,
         "presentacion": "Head MME de Banca Empresas de HSBC",
@@ -86,7 +85,7 @@
         "apellido": "Scasserra"
     },
     {
-        "id": 1503,
+        "id": 5,
         "nombre": "Maximiliano Schellhas",
         "institucion": null,
         "presentacion": "Líder de la Red de Impulsores de Empleo de IDEA y Director General - Staffing & Key Accounts en Randstad",
@@ -103,7 +102,7 @@
         "apellido": "Schellhas"
     },
     {
-        "id": 1504,
+        "id": 6,
         "nombre": "Fernando Martin Storchi",
         "institucion": null,
         "presentacion": "Ceo de Megatlon",
@@ -120,7 +119,7 @@
         "apellido": "Storchi"
     },
     {
-        "id": 1505,
+        "id": 7,
         "nombre": "Fernando Straface",
         "institucion": null,
         "presentacion": "Secretario General y Relaciones Internacionales de Gobierno de la Ciudad de Buenos Aires",
@@ -137,7 +136,7 @@
         "apellido": "Straface"
     },
     {
-        "id": 1507,
+        "id": 8,
         "nombre": "Pedro Tarak",
         "institucion": null,
         "presentacion": "Presidente de Sistema B Internacional",
@@ -154,7 +153,7 @@
         "apellido": "Tarak"
     },
     {
-        "id": 1508,
+        "id": 9,
         "nombre": "María Amelia Videla",
         "institucion": null,
         "presentacion": "Directora de Sustentabilidad y Asuntos Públicos de ManpowerGroup",
@@ -170,6 +169,6 @@
         "linkedinURL": "https://www.linkedin.com/in/mar%C3%ADa-amelia-videla-2729684/",
         "apellido": "Videla"
     }
-    ]
-}
+]
+
   

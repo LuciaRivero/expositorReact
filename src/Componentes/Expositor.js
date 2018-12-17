@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 class Expositor extends Component {
 
     confirmarEliminacion = () => {
-        const {id} = this.props.info;
+       const {id} = this.props.info;
         Swal({
             title: 'Estas Seguro',
             text: "Esto no se puedo revertir",
@@ -18,7 +18,7 @@ class Expositor extends Component {
             cancelButtonText: 'Cancelar'
           }).then((result) => {
             if (result.value) {
-                this.props.borrarExpositor(id)
+              //this.props.borrarExpositor(id)
               Swal(
                 'Eliminado',
                 'El expositor fue eliminado',
@@ -28,11 +28,14 @@ class Expositor extends Component {
           })
     }
     render() { 
-        const {id} =this.props.info;
+       const {nombre,apellido,presentacion,thumbnailURL,linkedinURL} = this.props.info;
         return ( 
-            <tr>               
+            <tr>   
+                <td>{nombre}</td>
+                <td>{apellido}</td> 
+                <td></td>           
                 <td>
-                    <Link to={`/editar/${id}`} className="btn btn-warning">Editar</Link>
+                <Link to={`/editar/{id}`} className="btn btn-warning">Editar</Link> 
                     <button onClick={this.confirmarEliminacion} className="btn btn-danger">Borrar</button>
                 </td>
             </tr>
@@ -41,4 +44,6 @@ class Expositor extends Component {
 }
  
 export default Expositor;
+
+/**<Link to={`/editar/${id}`} className="btn btn-warning">Editar</Link> */
 
