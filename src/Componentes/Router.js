@@ -3,7 +3,6 @@ import axios from 'axios';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Crear from './Crear';
 import Swal from 'sweetalert2';
-//import Listado from './Listado';
 import Expositores from './Expositores';
 
 class Router extends Component {
@@ -15,13 +14,14 @@ class Router extends Component {
     }
 
     obtenerExpositores = () => {
-        axios.get (`../expositores.json`)
+        axios.get (`./expositores.json`)
         .then(res => {
             this.setState({
                 expositores: res.expositores
             })
         })
     }
+    
     crearExpositor = (expositores) => {
         
         axios.post(``, {expositores})

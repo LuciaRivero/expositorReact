@@ -7,6 +7,7 @@ class Listado extends Component {
         const expositores = this.props.expositores;
 
         if(expositores.length === 0) return null;
+        
         return (
             <React.Fragment>
                 {Object.keys(expositores).map(expositor => (

@@ -28,13 +28,10 @@ class Expositor extends Component {
           })
     }
     render() { 
-        const {id,title} =this.props.info;
+        const {id} =this.props.info;
         return ( 
-            <tr>
-                <td>{id}</td>
-                <td>{title}</td>
+            <tr>               
                 <td>
-                    <Link to={`/expositor/${id}`} className="btn btn-primary">Ver más</Link>
                     <Link to={`/editar/${id}`} className="btn btn-warning">Editar</Link>
                     <button onClick={this.confirmarEliminacion} className="btn btn-danger">Borrar</button>
                 </td>
