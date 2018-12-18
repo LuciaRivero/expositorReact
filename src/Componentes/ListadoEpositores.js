@@ -4,6 +4,8 @@ import Expositor from './Expositor';
 
 class Listado extends Component {
 
+    
+
     mostrarExpositores = () => {
         const expositores = this.props.expositores;
 
@@ -16,9 +18,12 @@ class Listado extends Component {
                         key={expositor}
                         borrarExpositor={this.props.borrarExpositor}
                         info={this.props.expositores[expositor]}
+                       
                         />
                 ))}
             </React.Fragment>
+
+                    
         )
     }
     render() { 
@@ -38,6 +43,3 @@ class Listado extends Component {
  
 export default Listado;
 
-/*key={expositor}
-info={this.expositores.expositores[expositor]}
-borrarExpositor={this.props.borrarExpositor} */

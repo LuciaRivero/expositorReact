@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Crear from './Crear';
+import Crear from './CrearExpositor';
 import Swal from 'sweetalert2';
 import Expositores from './Expositores';
 import infoExpositores from '../Datos/Expositores.json';
-import Editar from './Editar';
+import Editar from './EditarExpositor';
 
 class Router extends Component {
     state = {
@@ -94,21 +94,15 @@ class Router extends Component {
                     }}/>
                     <Route exact path="/crear" render= { () => {
                         return (
-                            <Crear
+                            <CrearExpositor
                                 crearExpositor={this.crearExpositor} />
                         )
                     }}/>
-                    <Route exact path="/editar/:Id" render={(props) =>{
-                        let idExpositor = props.location.pathname.replace('/editar/','');
-                        const expositor = this.state.expositores; 
-                        let filtro;
-                        filtro = expositor.filter(expositores => (
-                            expositores.id === Number(idExpositor)
-                        ))
+                    <Route exact path="/Editar/" render={() =>{ //props
+                        
                         return (
-                            <Editar
-                                post={filtro[0]}
-                                editarPost={this.editarExpositor}
+                            <EditarExpositor
+                                
                             />
                         )
                     }}/>
@@ -120,3 +114,21 @@ class Router extends Component {
 }
  
 export default Router;
+
+/**
+ * let idExpositor = props.location.pathname.replace('/editar/','');
+                        const expositor = this.state.expositores; 
+                        let filtro;
+                        filtro = expositor.filter(expositores => (
+                            expositores.id === Number(idExpositor)
+                        ))
+
+
+
+                        expositor={filtro[0]}
+                                editarExpositor={this.editarExpositor}
+ * 
+ * 
+ * 
+ * 
+ */

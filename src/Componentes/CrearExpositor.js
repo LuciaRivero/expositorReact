@@ -132,7 +132,7 @@ class FormExpositores extends Component {
                         
                         <div>
                             <Button type="submit" variant="contained" color="primary">
-                            Enviar
+                            Guardar
                             </Button>
                         </div>
 

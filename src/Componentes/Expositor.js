@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import Swal from 'sweetalert2';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+//import DeleteRoundedIcon from '@material-ui/icons/DeleteRounded';
+
 
 
 class Expositor extends Component {
@@ -28,24 +35,50 @@ class Expositor extends Component {
             }
           })
     }
+
+    
     render() { 
        const {nombre,apellido,cargo,empresa} = this.props.info;
         return ( 
-            <tr>   
-                <td>{nombre}</td>
-                <td>{apellido}</td> 
-                <td>{cargo}</td>
-                <td>{empresa}</td>
-                <td></td>           
-                <td>
-                <Link to={`/Editar/`} className="btn btn-warning">Editar</Link> 
-                    <button onClick={this.confirmarEliminacion} className="btn btn-danger">Borrar</button>
-                </td>
-            </tr>
+            <div>
+                <Paper>
+                    <Table>
+                        <TableBody>
+                            <TableRow>
+                                <TableCell>{nombre}</TableCell>
+                                <TableCell >{apellido}</TableCell>
+                                <TableCell >{cargo}</TableCell>
+                                <TableCell>{empresa}</TableCell>
+                                <TableCell>
+                                <Link to={`/Editar/`} className="btn btn-warning">Editar</Link> 
+                                <button onClick={this.confirmarEliminacion} className="btn btn-danger">Borrar</button>
+                                </TableCell>
+                            </TableRow>
+                          
+                            
+                            
+                        </TableBody>   
+                    </Table>
+                </Paper>
+            </div>
+        
          );
     }
+    
 }
+
+
+
  
 export default Expositor;
+
+/**<Link to={`/Editar/`} className="btn btn-warning">Editar</Link> 
+<button onClick={this.confirmarEliminacion} className="btn btn-danger">Borrar</button> */
+
+
+
+
+
+
 
 
